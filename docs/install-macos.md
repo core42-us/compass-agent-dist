@@ -4,6 +4,7 @@
 
 - macOS on Apple Silicon
 - iTerm2. Other terminal emulators may work, but iTerm2 is the current tested baseline.
+- GPT-5 access for the Compass API key/resource. This release was tested only with GPT-5.
 - A Compass release binary named `compass-darwin-arm64`
 
 Recommended for developer workflows:
@@ -53,7 +54,7 @@ echo 'export COMPASS_API_KEY="your-api-key"' >> ~/.zshrc
 exec zsh
 ```
 
-The Compass documentation notes that generated API keys are shown only once, so store the key securely. Keep API keys out of public issues, screenshots, prompts, and shared logs.
+The Compass documentation notes that generated API keys are shown only once, so store the key securely. This release was tested with GPT-5, so make sure the API key/resource you use has GPT-5 access. Keep API keys out of public issues, screenshots, prompts, and shared logs.
 
 ## Verify Checksum
 

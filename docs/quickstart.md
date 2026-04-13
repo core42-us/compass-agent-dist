@@ -8,7 +8,7 @@ cd /path/to/your/repo
 compass
 ```
 
-Get a Compass API key from [Core42 Compass API key documentation](https://www.core42.ai/compass/documentation/manage-api-keys). The Compass documentation notes that generated API keys are shown only once, so store the key securely. Do not paste API keys into public issues, screenshots, prompts, or shared logs.
+Get a Compass API key from [Core42 Compass API key documentation](https://www.core42.ai/compass/documentation/manage-api-keys). The Compass documentation notes that generated API keys are shown only once, so store the key securely. This release was tested with GPT-5, so make sure the API key/resource you use has GPT-5 access. Do not paste API keys into public issues, screenshots, prompts, or shared logs.
 
 Try:
 

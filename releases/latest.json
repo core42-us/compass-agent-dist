@@ -7,7 +7,8 @@
       "asset": "compass-darwin-arm64",
       "checksum": "a0f8968453add81e42a4a95c5dc5dce55e4ce8e35cc7e714e8fdefee5b11be8b",
       "checksum_file": "checksums/compass-darwin-arm64.sha256",
-      "tested_terminal": "iTerm2"
+      "tested_terminal": "iTerm2",
+      "tested_model": "gpt-5"
     }
   ]
 }

@@ -1,6 +1,6 @@
 # Troubleshooting
 
-Current tested terminal baseline: iTerm2 on macOS Apple Silicon. If you use another terminal emulator, include that detail when reporting display, keyboard, approval-card, or paste/input issues.
+Current tested baseline: iTerm2 on macOS Apple Silicon with GPT-5. If you use another terminal emulator or model configuration, include that detail when reporting display, keyboard, approval-card, paste/input, or model-response issues.
 
 ## The Binary Will Not Run
 
@@ -45,6 +45,8 @@ export COMPASS_API_KEY="your-api-key"
 
 Do not share the printed key value in public issues or logs.
 
+If credentials are set but model requests still fail, confirm that the API key/resource has GPT-5 access. This release was tested only with GPT-5.
+
 ## Search Feels Slow Or Less Complete
 
 Install `ripgrep` so Compass can use `rg` for fast repository search:
@@ -74,6 +76,7 @@ Include:
 - macOS version,
 - chip architecture,
 - terminal emulator and version,
+- model name and whether your API key/resource has access to it,
 - what you typed,
 - what you expected,
 - what happened instead.

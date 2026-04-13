@@ -6,7 +6,7 @@ This repository is the public distribution surface for Compass. It contains inst
 
 ## Install On macOS Apple Silicon
 
-Current validation note: this binary has been tested on macOS Apple Silicon using iTerm2. Other terminal emulators may work, but they are not part of the current tested baseline.
+Current validation note: this binary has been tested on macOS Apple Silicon using iTerm2 and GPT-5. Other terminal emulators and model configurations may work, but they are not part of the current tested baseline.
 
 Download the latest `compass-darwin-arm64` binary from the public release page, then:
 
@@ -40,7 +40,7 @@ echo 'export COMPASS_API_KEY="your-api-key"' >> ~/.zshrc
 exec zsh
 ```
 
-The Compass documentation notes that generated API keys are shown only once, so store the key securely. Do not paste API keys into public issues, screenshots, prompts, or shared logs.
+The Compass documentation notes that generated API keys are shown only once, so store the key securely. This release was tested with GPT-5, so make sure the API key/resource you use has GPT-5 access. Do not paste API keys into public issues, screenshots, prompts, or shared logs.
 
 ## Recommended Tools
 
@@ -84,6 +84,7 @@ explain how auth works in this repo with file references
 
 - macOS Apple Silicon first: `compass-darwin-arm64`
 - tested terminal baseline: iTerm2
+- tested model baseline: GPT-5
 - public docs and release notes in this repo
 - checksums per release
 - Homebrew planned after release naming and upgrade/rollback docs stabilize
@@ -94,6 +95,7 @@ When reporting an issue, include:
 
 - Compass version or release tag
 - macOS version and chip architecture
+- model name and whether your API key/resource has access to it
 - the command or prompt you ran
 - whether the issue happened during install, startup, approval, tool use, or final answer generation
 
