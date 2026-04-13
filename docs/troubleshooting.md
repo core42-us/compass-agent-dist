@@ -37,7 +37,7 @@ Make sure `COMPASS_API_KEY` is set in the same shell where you launch Compass:
 echo "$COMPASS_API_KEY"
 ```
 
-If it is empty, get a Compass API key from [compass.core42.ai](https://compass.core42.ai/) and set it:
+If it is empty, get a Compass API key from [Core42 Compass API key documentation](https://www.core42.ai/compass/documentation/manage-api-keys) and set it:
 
 ```bash
 export COMPASS_API_KEY="your-api-key"

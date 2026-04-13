@@ -27,7 +27,7 @@ If macOS blocks the first launch, verify that the checksum matches the published
 
 ## API Key
 
-Compass needs a Compass API key before model-backed workflows can run. Get your key from [compass.core42.ai](https://compass.core42.ai/), then set it in your shell:
+Compass needs a Compass API key before model-backed workflows can run. Get your key from [Core42 Compass API key documentation](https://www.core42.ai/compass/documentation/manage-api-keys), then set it in your shell:
 
 ```bash
 export COMPASS_API_KEY="your-api-key"
@@ -40,7 +40,7 @@ echo 'export COMPASS_API_KEY="your-api-key"' >> ~/.zshrc
 exec zsh
 ```
 
-Do not paste API keys into public issues, screenshots, prompts, or shared logs.
+The Compass documentation notes that generated API keys are shown only once, so store the key securely. Do not paste API keys into public issues, screenshots, prompts, or shared logs.
 
 ## Recommended Tools
 
