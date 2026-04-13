@@ -85,6 +85,7 @@ Useful first prompts:
 
 ```text
 compare this repo to ../other-repo and summarize the important architectural differences
+give me a beginner-friendly map of this repo: what it does, main folders, important entrypoints, and where to read first
 review my current changes and show concrete findings first
 fix the failing test, run the relevant tests, and summarize changed files
 explain how auth works in this repo with file references

@@ -42,6 +42,32 @@ trace how this field moves from request handling to persistence and summarize ri
 identify the likely impacted files and tests for this change before editing anything
 ```
 
+## New Teammate Or Intern Onboarding
+
+```text
+give me a beginner-friendly map of this repo: what it does, main folders, important entrypoints, and where to read first
+```
+
+```text
+explain the main request flow with file references; separate what is certain from what is inferred
+```
+
+```text
+help me understand this issue before editing: summarize the likely code area, terms I need to know, and files to inspect
+```
+
+```text
+find a small safe starter task in this repo and explain what files and tests I should understand first
+```
+
+```text
+before editing anything, list the likely files, tests, risks, and questions I should ask a teammate
+```
+
+```text
+make the smallest safe change for this starter task, run targeted tests, and summarize changed files
+```
+
 ## Multi-Repo And Microservices Workspaces
 
 Start Compass in one repo, then refer to sibling repos by path. Compass will ask for approval before reading outside the current workspace.
