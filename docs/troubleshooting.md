@@ -1,5 +1,7 @@
 # Troubleshooting
 
+Current tested terminal baseline: iTerm2 on macOS Apple Silicon. If you use another terminal emulator, include that detail when reporting display, keyboard, approval-card, or paste/input issues.
+
 ## The Binary Will Not Run
 
 Check executable permissions:
@@ -55,6 +57,7 @@ Include:
 - Compass release tag or version line from startup,
 - macOS version,
 - chip architecture,
+- terminal emulator and version,
 - what you typed,
 - what you expected,
 - what happened instead.

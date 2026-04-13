@@ -6,6 +6,8 @@ This repository is the public distribution surface for Compass. It contains inst
 
 ## Install On macOS Apple Silicon
 
+Current validation note: this binary has been tested on macOS Apple Silicon using iTerm2. Other terminal emulators may work, but they are not part of the current tested baseline.
+
 Download the latest `compass-darwin-arm64` binary from the public release page, then:
 
 ```bash
@@ -63,6 +65,7 @@ explain how auth works in this repo with file references
 ## Current Distribution Scope
 
 - macOS Apple Silicon first: `compass-darwin-arm64`
+- tested terminal baseline: iTerm2
 - public docs and release notes in this repo
 - checksums per release
 - Homebrew planned after release naming and upgrade/rollback docs stabilize

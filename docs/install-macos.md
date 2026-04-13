@@ -3,7 +3,7 @@
 ## Requirements
 
 - macOS on Apple Silicon
-- Terminal access
+- iTerm2. Other terminal emulators may work, but iTerm2 is the current tested baseline.
 - A Compass release binary named `compass-darwin-arm64`
 
 Recommended for developer workflows:
