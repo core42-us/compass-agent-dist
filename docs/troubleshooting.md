@@ -31,16 +31,18 @@ exec zsh
 
 ## Model Requests Fail Or Ask For Credentials
 
-Make sure `COMPASS_API_KEY` is set in the same shell where you launch Compass:
+Make sure `COMPASS_API_KEY` and `COMPASS_MODEL` are set in the same shell where you launch Compass:
 
 ```bash
 echo "$COMPASS_API_KEY"
+echo "$COMPASS_MODEL"
 ```
 
-If it is empty, get a Compass API key from [Core42 Compass API key documentation](https://www.core42.ai/compass/documentation/manage-api-keys) and set it:
+If the key is empty, get a Compass API key from [Core42 Compass API key documentation](https://www.core42.ai/compass/documentation/manage-api-keys) and set it:
 
 ```bash
 export COMPASS_API_KEY="your-api-key"
+export COMPASS_MODEL="gpt-5"
 ```
 
 Do not share the printed key value in public issues or logs.

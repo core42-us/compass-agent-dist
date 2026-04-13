@@ -27,16 +27,18 @@ If macOS blocks the first launch, verify that the checksum matches the published
 
 ## API Key
 
-Compass needs a Compass API key before model-backed workflows can run. Get your key from [Core42 Compass API key documentation](https://www.core42.ai/compass/documentation/manage-api-keys), then set it in your shell:
+Compass needs a Compass API key and model name before model-backed workflows can run. Get your key from [Core42 Compass API key documentation](https://www.core42.ai/compass/documentation/manage-api-keys), then set it with the tested model in your shell:
 
 ```bash
 export COMPASS_API_KEY="your-api-key"
+export COMPASS_MODEL="gpt-5"
 ```
 
 To keep it for future terminal sessions:
 
 ```bash
 echo 'export COMPASS_API_KEY="your-api-key"' >> ~/.zshrc
+echo 'export COMPASS_MODEL="gpt-5"' >> ~/.zshrc
 exec zsh
 ```
 
@@ -68,6 +70,7 @@ The two SHA-256 values should match for the release you downloaded.
 
 ```bash
 export COMPASS_API_KEY="your-api-key"
+export COMPASS_MODEL="gpt-5"
 compass
 ```
 
