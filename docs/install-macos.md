@@ -41,11 +41,12 @@ If `~/.local/bin` is already on your `PATH`, you can skip the shell profile upda
 
 ## API Key
 
-Compass needs a Compass API key and model name before model-backed workflows can run. Get your key from [Core42 Compass API key documentation](https://www.core42.ai/compass/documentation/manage-api-keys), then set it with the tested model in your shell:
+Compass needs a Compass API key, model name, and model-request timeout before model-backed workflows can run. Get your key from [Core42 Compass API key documentation](https://www.core42.ai/compass/documentation/manage-api-keys), then set it with the tested model and recommended timeout in your shell:
 
 ```bash
 export COMPASS_API_KEY="your-api-key"
 export COMPASS_MODEL="gpt-5"
+export COMPASS_TIMEOUT_SECONDS="300"
 ```
 
 To keep it for future terminal sessions:
@@ -53,10 +54,13 @@ To keep it for future terminal sessions:
 ```bash
 echo 'export COMPASS_API_KEY="your-api-key"' >> ~/.zshrc
 echo 'export COMPASS_MODEL="gpt-5"' >> ~/.zshrc
+echo 'export COMPASS_TIMEOUT_SECONDS="300"' >> ~/.zshrc
 exec zsh
 ```
 
 The Compass documentation notes that generated API keys are shown only once, so store the key securely. This release was tested with GPT-5, so make sure the API key/resource you use has GPT-5 access. Keep API keys out of public issues, screenshots, prompts, and shared logs.
+
+`COMPASS_TIMEOUT_SECONDS=300` is the recommended starting point. If long repo-review, comparison, or implementation prompts frequently time out, increase it for that shell session, for example `export COMPASS_TIMEOUT_SECONDS="600"`.
 
 ## Verify Checksum
 

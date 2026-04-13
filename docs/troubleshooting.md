@@ -31,11 +31,12 @@ exec zsh
 
 ## Model Requests Fail Or Ask For Credentials
 
-Make sure `COMPASS_API_KEY` and `COMPASS_MODEL` are set in the same shell where you launch Compass:
+Make sure `COMPASS_API_KEY`, `COMPASS_MODEL`, and `COMPASS_TIMEOUT_SECONDS` are set in the same shell where you launch Compass:
 
 ```bash
 echo "$COMPASS_API_KEY"
 echo "$COMPASS_MODEL"
+echo "$COMPASS_TIMEOUT_SECONDS"
 ```
 
 If the key is empty, get a Compass API key from [Core42 Compass API key documentation](https://www.core42.ai/compass/documentation/manage-api-keys) and set it:
@@ -43,11 +44,28 @@ If the key is empty, get a Compass API key from [Core42 Compass API key document
 ```bash
 export COMPASS_API_KEY="your-api-key"
 export COMPASS_MODEL="gpt-5"
+export COMPASS_TIMEOUT_SECONDS="300"
 ```
 
 Do not share the printed key value in public issues or logs.
 
 If credentials are set but model requests still fail, confirm that the API key/resource has GPT-5 access. This release was tested only with GPT-5.
+
+## Frequent Timeouts
+
+The recommended starting timeout is:
+
+```bash
+export COMPASS_TIMEOUT_SECONDS="300"
+```
+
+If long repo-review, comparison, or implementation prompts frequently time out, try a larger value for that shell session:
+
+```bash
+export COMPASS_TIMEOUT_SECONDS="600"
+```
+
+If a prompt still times out at a higher value, include the timeout value and prompt type when reporting the issue.
 
 ## Search Feels Slow Or Less Complete
 

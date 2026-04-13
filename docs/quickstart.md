@@ -5,6 +5,7 @@ Start Compass from a repository:
 ```bash
 export COMPASS_API_KEY="your-api-key"
 export COMPASS_MODEL="gpt-5"
+export COMPASS_TIMEOUT_SECONDS="300"
 cd /path/to/your/repo
 compass
 ```
