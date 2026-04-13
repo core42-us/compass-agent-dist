@@ -1,0 +1,52 @@
+# Troubleshooting
+
+## The Binary Will Not Run
+
+Check executable permissions:
+
+```bash
+chmod +x compass
+./compass
+```
+
+If macOS blocks the binary, verify the checksum before allowing it in System Settings.
+
+## `compass` Command Not Found
+
+Make sure the install directory is on your shell path:
+
+```bash
+echo "$PATH"
+ls -l ~/.local/bin/compass
+```
+
+For zsh:
+
+```bash
+echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.zshrc
+exec zsh
+```
+
+## Compass Asks For Approval
+
+Compass asks before higher-risk actions, such as:
+
+- reading local paths outside the current workspace,
+- changing files,
+- running commands,
+- changing repository state.
+
+Approve only if the requested action matches your intent.
+
+## Reporting Issues
+
+Include:
+
+- Compass release tag or version line from startup,
+- macOS version,
+- chip architecture,
+- what you typed,
+- what you expected,
+- what happened instead.
+
+Do not include secrets, API keys, private code, or proprietary logs in public issues.

@@ -1,0 +1,11 @@
+{
+  "version": "unreleased",
+  "source_commit": "a650f2c",
+  "platforms": [
+    {
+      "name": "macos-apple-silicon",
+      "asset": "compass-darwin-arm64",
+      "checksum_file": "checksums/compass-darwin-arm64.sha256"
+    }
+  ]
+}
