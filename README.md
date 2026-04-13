@@ -25,6 +25,23 @@ compass
 
 If macOS blocks the first launch, verify that the checksum matches the published release before allowing the binary in System Settings.
 
+## API Key
+
+Compass needs a Compass API key before model-backed workflows can run. Get your key from [compass.core42.ai](https://compass.core42.ai/), then set it in your shell:
+
+```bash
+export COMPASS_API_KEY="your-api-key"
+```
+
+To keep it for future terminal sessions:
+
+```bash
+echo 'export COMPASS_API_KEY="your-api-key"' >> ~/.zshrc
+exec zsh
+```
+
+Do not paste API keys into public issues, screenshots, prompts, or shared logs.
+
 ## Recommended Tools
 
 Compass can launch without these, but developer workflows are better when they are available:
@@ -50,6 +67,7 @@ The two SHA-256 values should match for the release you downloaded.
 ## First Run
 
 ```bash
+export COMPASS_API_KEY="your-api-key"
 compass
 ```
 

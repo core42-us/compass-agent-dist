@@ -3,9 +3,12 @@
 Start Compass from a repository:
 
 ```bash
+export COMPASS_API_KEY="your-api-key"
 cd /path/to/your/repo
 compass
 ```
+
+Get a Compass API key from [compass.core42.ai](https://compass.core42.ai/). Do not paste API keys into public issues, screenshots, prompts, or shared logs.
 
 Try:
 

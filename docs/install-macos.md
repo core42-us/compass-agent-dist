@@ -38,6 +38,23 @@ compass
 
 If `~/.local/bin` is already on your `PATH`, you can skip the shell profile update.
 
+## API Key
+
+Compass needs a Compass API key before model-backed workflows can run. Get your key from [compass.core42.ai](https://compass.core42.ai/), then set it in your shell:
+
+```bash
+export COMPASS_API_KEY="your-api-key"
+```
+
+To keep it for future terminal sessions:
+
+```bash
+echo 'export COMPASS_API_KEY="your-api-key"' >> ~/.zshrc
+exec zsh
+```
+
+Keep API keys out of public issues, screenshots, prompts, and shared logs.
+
 ## Verify Checksum
 
 From the directory containing the downloaded binary:

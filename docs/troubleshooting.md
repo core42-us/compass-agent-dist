@@ -29,6 +29,22 @@ echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.zshrc
 exec zsh
 ```
 
+## Model Requests Fail Or Ask For Credentials
+
+Make sure `COMPASS_API_KEY` is set in the same shell where you launch Compass:
+
+```bash
+echo "$COMPASS_API_KEY"
+```
+
+If it is empty, get a Compass API key from [compass.core42.ai](https://compass.core42.ai/) and set it:
+
+```bash
+export COMPASS_API_KEY="your-api-key"
+```
+
+Do not share the printed key value in public issues or logs.
+
 ## Search Feels Slow Or Less Complete
 
 Install `ripgrep` so Compass can use `rg` for fast repository search:
