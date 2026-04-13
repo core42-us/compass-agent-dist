@@ -4,6 +4,13 @@ Current tested baseline: iTerm2 on macOS Apple Silicon with GPT-5. If you use an
 
 ## The Binary Will Not Run
 
+Prefer the release ZIP archive:
+
+```bash
+unzip compass-darwin-arm64.zip
+./compass-darwin-arm64
+```
+
 Check executable permissions:
 
 ```bash
@@ -11,7 +18,7 @@ chmod +x compass
 ./compass
 ```
 
-If macOS blocks the binary, verify the checksum before allowing it in System Settings.
+Mac releases are moving to Developer ID signed and notarized ZIP archives. If macOS still blocks the binary, verify the ZIP checksum and release source before allowing it in System Settings.
 
 ## `compass` Command Not Found
 

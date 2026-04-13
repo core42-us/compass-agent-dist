@@ -5,7 +5,7 @@
 - macOS on Apple Silicon
 - iTerm2. Other terminal emulators may work, but iTerm2 is the current tested baseline.
 - GPT-5 access for the Compass API key/resource. This release was tested only with GPT-5.
-- A Compass release binary named `compass-darwin-arm64`
+- A Compass release archive named `compass-darwin-arm64.zip`
 
 Recommended for developer workflows:
 
@@ -20,10 +20,10 @@ brew install git ripgrep
 
 ## Install
 
-Download `compass-darwin-arm64` from the latest public release, then run:
+Download `compass-darwin-arm64.zip` from the latest public release, then run:
 
 ```bash
-chmod +x compass-darwin-arm64
+unzip compass-darwin-arm64.zip
 ./compass-darwin-arm64
 ```
 
@@ -64,17 +64,17 @@ The Compass documentation notes that generated API keys are shown only once, so 
 
 ## Verify Checksum
 
-From the directory containing the downloaded binary:
+From the directory containing the downloaded archive:
 
 ```bash
-shasum -a 256 compass
+shasum -a 256 compass-darwin-arm64.zip
 ```
 
-Compare the result with the checksum published for the same release in `checksums/compass-darwin-arm64.sha256` or the release notes.
+Compare the result with the checksum published for the same release in `checksums/compass-darwin-arm64.zip.sha256` or the release notes.
 
 ## macOS Security Prompt
 
-If macOS blocks Compass on first run:
+Mac releases are moving to Developer ID signed and notarized ZIP archives. If macOS still blocks Compass on first run:
 
 1. Verify the checksum against the release notes.
 2. Open System Settings.

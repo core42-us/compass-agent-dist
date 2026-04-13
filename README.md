@@ -8,10 +8,10 @@ This repository is the public distribution surface for Compass. It contains inst
 
 Current validation note: this binary has been tested on macOS Apple Silicon using iTerm2 and GPT-5. Other terminal emulators and model configurations may work, but they are not part of the current tested baseline.
 
-Download the latest `compass-darwin-arm64` binary from the public release page, then:
+Download the latest `compass-darwin-arm64.zip` archive from the public release page, then:
 
 ```bash
-chmod +x compass-darwin-arm64
+unzip compass-darwin-arm64.zip
 ./compass-darwin-arm64
 ```
 
@@ -23,7 +23,7 @@ mv compass-darwin-arm64 ~/.local/bin/compass
 compass
 ```
 
-If macOS blocks the first launch, verify that the checksum matches the published release before allowing the binary in System Settings.
+Mac releases are moving to Developer ID signed and notarized ZIP archives. If macOS still blocks the first launch, verify that the checksum matches the published release before allowing the binary in System Settings.
 
 ## API Key
 
@@ -64,8 +64,8 @@ brew install git ripgrep
 ## Verify A Download
 
 ```bash
-shasum -a 256 compass-darwin-arm64
-cat checksums/compass-darwin-arm64.sha256
+shasum -a 256 compass-darwin-arm64.zip
+cat checksums/compass-darwin-arm64.zip.sha256
 ```
 
 The two SHA-256 values should match for the release you downloaded.
