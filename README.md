@@ -79,7 +79,7 @@ export COMPASS_TIMEOUT_SECONDS="300"
 compass
 ```
 
-For day-to-day usage examples, see [docs/user-guide.md](docs/user-guide.md).
+For day-to-day usage examples, see [docs/user-guide.md](docs/user-guide.md) and [docs/prompt-library.md](docs/prompt-library.md).
 
 Useful first prompts:
 
@@ -88,6 +88,7 @@ compare this repo to ../other-repo and summarize the important architectural dif
 review my current changes and show concrete findings first
 fix the failing test, run the relevant tests, and summarize changed files
 explain how auth works in this repo with file references
+for this change, inspect this repo plus ../api-gateway and ../worker-service and tell me which services might be impacted
 ```
 
 ## Current Distribution Scope
