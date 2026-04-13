@@ -88,6 +88,7 @@ compare this repo to ../other-repo and summarize the important architectural dif
 review my current changes and show concrete findings first
 fix the failing test, run the relevant tests, and summarize changed files
 explain how auth works in this repo with file references
+find where payment status is defined and show the main places it is consumed
 for this change, inspect this repo plus ../api-gateway and ../worker-service and tell me which services might be impacted
 ```
 

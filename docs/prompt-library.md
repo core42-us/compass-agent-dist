@@ -30,6 +30,18 @@ map the main runtime loop and identify the most important packages/files to read
 summarize the command surface and point out commands that look risky or under-documented
 ```
 
+```text
+find where this function/type/config value is defined and show the most important references
+```
+
+```text
+trace how this field moves from request handling to persistence and summarize risky assumptions
+```
+
+```text
+identify the likely impacted files and tests for this change before editing anything
+```
+
 ## Multi-Repo And Microservices Workspaces
 
 Start Compass in one repo, then refer to sibling repos by path. Compass will ask for approval before reading outside the current workspace.
@@ -52,6 +64,10 @@ map the dependency flow between ../web-app, ../api-gateway, and this service; se
 
 ```text
 find cross-repo references to the customer id contract across this repo, ../customer-service, and ../reporting-service
+```
+
+```text
+trace the customer id contract across this repo, ../customer-service, and ../reporting-service; separate direct code evidence from assumptions
 ```
 
 ```text

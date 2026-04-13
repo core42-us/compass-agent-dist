@@ -88,7 +88,40 @@ Compass will ask before reading paths outside the current workspace. Approve onl
 
 For more examples, see [prompt-library.md](prompt-library.md).
 
-## 5. Useful Commands
+## 5. Code Intelligence
+
+Compass uses code structure to make repo answers more grounded. You do not need to know the implementation details to benefit from it.
+
+This helps when you ask Compass to:
+
+- find where a function, type, route, or config value is defined,
+- find likely references and call sites,
+- trace how data moves across files or services,
+- identify which files or services may be affected by a change,
+- explain architecture with file-backed evidence instead of generic summaries,
+- review code with fewer guesses and more concrete references.
+
+Example prompts:
+
+```text
+find where payment status is defined and show the main places it is consumed
+```
+
+```text
+for this change, identify the likely impacted files and tests before editing anything
+```
+
+```text
+trace how customer id flows from the API layer to persistence and point out risky assumptions
+```
+
+For multi-repo systems, combine this with workspace prompts:
+
+```text
+trace the customer id contract across this repo, ../customer-service, and ../reporting-service
+```
+
+## 6. Useful Commands
 
 ```text
 /help
@@ -100,7 +133,7 @@ For more examples, see [prompt-library.md](prompt-library.md).
 
 Use `/help` first if you are unsure which command exists in the current release.
 
-## 6. Recommended Tools
+## 7. Recommended Tools
 
 Compass can launch without these, but developer workflows are better when they are installed:
 
@@ -110,7 +143,7 @@ brew install git ripgrep
 
 `git` enables repository status, diffs, history, and branch-aware workflows. `ripgrep` provides `rg`, which improves repo-wide search speed and ignore-file behavior.
 
-## 7. API Key And Model
+## 8. API Key And Model
 
 Get a Compass API key from [Core42 Compass API key documentation](https://www.core42.ai/compass/documentation/manage-api-keys).
 
@@ -126,7 +159,7 @@ The Compass documentation notes that generated API keys are shown only once, so 
 
 Do not paste API keys into public issues, screenshots, prompts, or shared logs.
 
-## 8. Common Issues
+## 9. Common Issues
 
 If the binary does not run:
 
@@ -153,7 +186,7 @@ brew install ripgrep
 
 See [troubleshooting.md](troubleshooting.md) for more detail.
 
-## 9. Reporting Issues
+## 10. Reporting Issues
 
 Include:
 
