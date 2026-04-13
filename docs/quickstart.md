@@ -24,6 +24,8 @@ design the CI/CD release plan and rollback workflow
 
 Compass may ask for approval before reading paths outside the current workspace or before making write-side changes. Approve only when the requested path, command, or write action matches what you intended.
 
+For a broader walkthrough, see [user-guide.md](user-guide.md).
+
 Useful commands:
 
 ```text

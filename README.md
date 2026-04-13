@@ -79,6 +79,8 @@ export COMPASS_TIMEOUT_SECONDS="300"
 compass
 ```
 
+For day-to-day usage examples, see [docs/user-guide.md](docs/user-guide.md).
+
 Useful first prompts:
 
 ```text
