@@ -23,6 +23,19 @@ compass
 
 If macOS blocks the first launch, verify that the checksum matches the published release before allowing the binary in System Settings.
 
+## Recommended Tools
+
+Compass can launch without these, but developer workflows are better when they are available:
+
+- `git`: repository status, diffs, history, and branch-aware workflows.
+- `rg` from `ripgrep`: faster code search with better ignore-file behavior. Compass falls back when `rg` is missing, but install it if you expect repo-wide search/review tasks.
+
+With Homebrew:
+
+```bash
+brew install git ripgrep
+```
+
 ## Verify A Download
 
 ```bash

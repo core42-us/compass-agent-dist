@@ -6,6 +6,17 @@
 - Terminal access
 - A Compass release binary named `compass-darwin-arm64`
 
+Recommended for developer workflows:
+
+- `git` for repository-aware status, diff, and history tasks.
+- `rg` from `ripgrep` for fast code search. Compass can fall back when `rg` is missing, but repo review and code search flows are better with it installed.
+
+With Homebrew:
+
+```bash
+brew install git ripgrep
+```
+
 ## Install
 
 Download `compass-darwin-arm64` from the latest public release, then run:

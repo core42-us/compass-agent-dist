@@ -27,6 +27,16 @@ echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.zshrc
 exec zsh
 ```
 
+## Search Feels Slow Or Less Complete
+
+Install `ripgrep` so Compass can use `rg` for fast repository search:
+
+```bash
+brew install ripgrep
+```
+
+Compass can fall back when `rg` is unavailable, but `ripgrep` is recommended for repo review, comparison, and code understanding tasks.
+
 ## Compass Asks For Approval
 
 Compass asks before higher-risk actions, such as:
