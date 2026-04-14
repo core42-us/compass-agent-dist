@@ -12,6 +12,8 @@ Download the latest `compass-darwin-arm64.zip` archive from the public release p
 
 ```bash
 unzip compass-darwin-arm64.zip
+./compass-darwin-arm64 init
+./compass-darwin-arm64 doctor
 ./compass-darwin-arm64
 ```
 
@@ -27,22 +29,16 @@ Mac releases are moving to Developer ID signed and notarized ZIP archives. If ma
 
 ## API Key
 
-Compass needs a Compass API key, model name, and model-request timeout before model-backed workflows can run. Get your key from [Core42 Compass API key documentation](https://www.core42.ai/compass/documentation/manage-api-keys), then set it with the tested model and recommended timeout in your shell:
+Compass needs a Compass API key, model name, and model-request timeout before model-backed workflows can run. Get your key from [Core42 Compass API key documentation](https://www.core42.ai/compass/documentation/manage-api-keys), then run setup:
 
 ```bash
-export COMPASS_API_KEY="your-api-key"
-export COMPASS_MODEL="gpt-5"
-export COMPASS_TIMEOUT_SECONDS="300"
+compass init --api-key "your-api-key"
+compass doctor
 ```
 
-To keep it for future terminal sessions:
+`compass init` writes non-secret settings to `~/.compass/settings.json` and stores the API key in macOS Keychain when available. This release was tested with GPT-5 and a 300 second timeout, so the generated settings default to `gpt-5` and `COMPASS_TIMEOUT_SECONDS=300` behavior.
 
-```bash
-echo 'export COMPASS_API_KEY="your-api-key"' >> ~/.zshrc
-echo 'export COMPASS_MODEL="gpt-5"' >> ~/.zshrc
-echo 'export COMPASS_TIMEOUT_SECONDS="300"' >> ~/.zshrc
-exec zsh
-```
+Environment variables like `COMPASS_API_KEY`, `COMPASS_MODEL=gpt-5`, and `COMPASS_TIMEOUT_SECONDS=300` still work for CI or temporary shell overrides, but they are no longer the preferred local setup path.
 
 The Compass documentation notes that generated API keys are shown only once, so store the key securely. This release was tested with GPT-5, so make sure the API key/resource you use has GPT-5 access. Do not paste API keys into public issues, screenshots, prompts, or shared logs.
 
@@ -73,9 +69,8 @@ The two SHA-256 values should match for the release you downloaded.
 ## First Run
 
 ```bash
-export COMPASS_API_KEY="your-api-key"
-export COMPASS_MODEL="gpt-5"
-export COMPASS_TIMEOUT_SECONDS="300"
+compass init --api-key "your-api-key" --trust-current-repo
+compass doctor
 compass
 ```
 

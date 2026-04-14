@@ -15,9 +15,8 @@ Other terminals or model configurations may work, but they are not part of the c
 Run Compass from the repository you want it to inspect:
 
 ```bash
-export COMPASS_API_KEY="your-api-key"
-export COMPASS_MODEL="gpt-5"
-export COMPASS_TIMEOUT_SECONDS="300"
+compass init --api-key "your-api-key" --trust-current-repo
+compass doctor
 cd /path/to/your/repo
 compass
 ```

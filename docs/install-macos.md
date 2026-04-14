@@ -24,6 +24,8 @@ Download `compass-darwin-arm64.zip` from the latest public release, then run:
 
 ```bash
 unzip compass-darwin-arm64.zip
+./compass-darwin-arm64 init
+./compass-darwin-arm64 doctor
 ./compass-darwin-arm64
 ```
 
@@ -41,22 +43,16 @@ If `~/.local/bin` is already on your `PATH`, you can skip the shell profile upda
 
 ## API Key
 
-Compass needs a Compass API key, model name, and model-request timeout before model-backed workflows can run. Get your key from [Core42 Compass API key documentation](https://www.core42.ai/compass/documentation/manage-api-keys), then set it with the tested model and recommended timeout in your shell:
+Compass needs a Compass API key, model name, and model-request timeout before model-backed workflows can run. Get your key from [Core42 Compass API key documentation](https://www.core42.ai/compass/documentation/manage-api-keys), then run setup:
 
 ```bash
-export COMPASS_API_KEY="your-api-key"
-export COMPASS_MODEL="gpt-5"
-export COMPASS_TIMEOUT_SECONDS="300"
+compass init --api-key "your-api-key"
+compass doctor
 ```
 
-To keep it for future terminal sessions:
+`compass init` writes non-secret settings to `~/.compass/settings.json` and stores the API key in macOS Keychain when available. This release was tested with GPT-5 and a 300 second timeout, so the generated settings default to `gpt-5` and `COMPASS_TIMEOUT_SECONDS=300` behavior.
 
-```bash
-echo 'export COMPASS_API_KEY="your-api-key"' >> ~/.zshrc
-echo 'export COMPASS_MODEL="gpt-5"' >> ~/.zshrc
-echo 'export COMPASS_TIMEOUT_SECONDS="300"' >> ~/.zshrc
-exec zsh
-```
+Environment variables like `COMPASS_API_KEY`, `COMPASS_MODEL=gpt-5`, and `COMPASS_TIMEOUT_SECONDS=300` still work for CI or temporary shell overrides, but they are no longer the preferred local setup path.
 
 The Compass documentation notes that generated API keys are shown only once, so store the key securely. This release was tested with GPT-5, so make sure the API key/resource you use has GPT-5 access. Keep API keys out of public issues, screenshots, prompts, and shared logs.
 
