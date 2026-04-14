@@ -3,6 +3,8 @@
 Start Compass from a repository:
 
 ```bash
+brew tap core42-us/compass-agent-dist
+brew install compass
 compass init --api-key "your-api-key" --trust-current-repo
 compass doctor
 cd /path/to/your/repo

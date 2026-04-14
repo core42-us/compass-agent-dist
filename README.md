@@ -8,6 +8,20 @@ This repository is the public distribution surface for Compass. It contains inst
 
 Current validation note: this binary has been tested on macOS Apple Silicon using iTerm2 and GPT-5. Other terminal emulators and model configurations may work, but they are not part of the current tested baseline.
 
+### Homebrew
+
+```bash
+brew tap core42-us/compass-agent-dist
+brew install compass
+compass init
+compass doctor
+compass
+```
+
+The tap lives in this distribution repo, so release metadata, checksums, docs, and the Homebrew formula are versioned together.
+
+### Direct ZIP
+
 Download the latest `compass-darwin-arm64.zip` archive from the public release page, then:
 
 ```bash

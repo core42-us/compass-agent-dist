@@ -20,6 +20,20 @@ brew install git ripgrep
 
 ## Install
 
+### Homebrew
+
+```bash
+brew tap core42-us/compass-agent-dist
+brew install compass
+compass init
+compass doctor
+compass
+```
+
+The tap lives in the same public distribution repo as the release metadata, checksums, and docs.
+
+### Direct ZIP
+
 Download `compass-darwin-arm64.zip` from the latest public release, then run:
 
 ```bash
