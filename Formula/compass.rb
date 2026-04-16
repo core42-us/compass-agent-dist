@@ -1,9 +1,9 @@
 class Compass < Formula
   desc "Local-first coding assistant for repo-aware developer workflows"
   homepage "https://github.com/core42-us/compass-agent-dist"
-  url "https://github.com/core42-us/compass-agent-dist/releases/download/source-449d375/compass-darwin-arm64.zip"
-  version "source-449d375"
-  sha256 "768aec3bf4d497f047fce98d5cdb16b6791486489a40fb985d76ee9486e0b4c4"
+  url "https://github.com/core42-us/compass-agent-dist/releases/download/source-025c0f6/compass-darwin-arm64.zip"
+  version "source-025c0f6"
+  sha256 "4e15e8557a44005a1d46adaa572e46f65d0a9e00f146761c939bbd3c96cee49e"
 
   depends_on arch: :arm64
   depends_on :macos
