@@ -20,6 +20,8 @@ compass
 
 The tap lives in this distribution repo, so release metadata, checksums, docs, and the Homebrew formula are versioned together.
 
+Homebrew installs the `compass` launcher plus companion commands (`compass-tui`, `compass-agent`, `compass-server`, and `compass-bridge`) so subcommands such as `compass bridge ...` work from any repository.
+
 ### Direct ZIP
 
 Download the latest `compass-darwin-arm64.zip` archive from the public release page, then:
@@ -35,9 +37,12 @@ Optional local install:
 
 ```bash
 mkdir -p ~/.local/bin
-mv compass-darwin-arm64 ~/.local/bin/compass
+cp compass-darwin-arm64 ~/.local/bin/compass
+cp compass-tui compass-agent compass-server compass-bridge ~/.local/bin/
 compass
 ```
+
+Keep the companion binaries next to `compass` when installing from ZIP. The launcher uses them for `compass tui`, `compass agent`, `compass server`, and `compass bridge` subcommands.
 
 Mac releases are moving to Developer ID signed and notarized ZIP archives. If macOS still blocks the first launch, verify that the checksum matches the published release before allowing the binary in System Settings.
 

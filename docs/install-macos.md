@@ -32,6 +32,8 @@ compass
 
 The tap lives in the same public distribution repo as the release metadata, checksums, and docs.
 
+Homebrew installs the `compass` launcher plus companion commands (`compass-tui`, `compass-agent`, `compass-server`, and `compass-bridge`) so subcommands such as `compass bridge ...` work from any repository.
+
 ### Direct ZIP
 
 Download `compass-darwin-arm64.zip` from the latest public release, then run:
@@ -47,13 +49,16 @@ To install it on your shell path:
 
 ```bash
 mkdir -p ~/.local/bin
-mv compass-darwin-arm64 ~/.local/bin/compass
+cp compass-darwin-arm64 ~/.local/bin/compass
+cp compass-tui compass-agent compass-server compass-bridge ~/.local/bin/
 echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.zshrc
 exec zsh
 compass
 ```
 
 If `~/.local/bin` is already on your `PATH`, you can skip the shell profile update.
+
+Keep the companion binaries next to `compass` when installing from ZIP. The launcher uses them for `compass tui`, `compass agent`, `compass server`, and `compass bridge` subcommands.
 
 ## API Key
 

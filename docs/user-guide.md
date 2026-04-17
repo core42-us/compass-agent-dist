@@ -152,7 +152,7 @@ trace the customer id contract across this repo, ../customer-service, and ../rep
 
 ## 7. VS Code And Editor Workflows
 
-Compass can be used from VS Code today through its bridge commands and local HTTP bridge. This is the integration surface intended for VS Code extensions, editor panels, and command-palette actions.
+Compass can be used from VS Code today through its bridge commands and local HTTP bridge. This is the integration surface intended for VS Code extensions, editor panels, and command-palette actions. Bridge commands are clients, so start `compass server` first.
 
 ### Use VS Code Tasks
 
@@ -179,6 +179,13 @@ Create `.vscode/tasks.json` in your repo:
 
 Run the task from VS Code with `Terminal: Run Task`.
 
+Before running bridge tasks, start the local server from the repo:
+
+```bash
+cd /path/to/your/repo
+compass server --addr 127.0.0.1:8787 --repo-dir "$PWD"
+```
+
 Useful bridge commands:
 
 ```bash
@@ -197,7 +204,7 @@ compass bridge tasks output latest
 For a custom VS Code extension or internal editor adapter:
 
 ```bash
-compass-server --addr 127.0.0.1:8787 --repo-dir /path/to/repo
+compass server --addr 127.0.0.1:8787 --repo-dir /path/to/repo
 ```
 
 Example bridge calls:
