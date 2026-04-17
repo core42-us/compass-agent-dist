@@ -3,7 +3,7 @@ class Compass < Formula
   homepage "https://github.com/core42-us/compass-agent-dist"
   url "https://github.com/core42-us/compass-agent-dist/releases/download/source-920124c/compass-darwin-arm64.zip"
   version "source-920124c"
-  sha256 "39bda44a656580bad8927a9635ce1db05f9e6cfb88a7616d55e61ba8ccf7859a"
+  sha256 "69fe940a9fbdb8ec8058d28d19cebce8fd6189fea7bc13fd2cee853281d8ee18"
 
   depends_on arch: :arm64
   depends_on :macos

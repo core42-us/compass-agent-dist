@@ -2,15 +2,15 @@
   "version": "source-920124c",
   "source_commit": "920124c",
   "signed": true,
-  "notarized": false,
+  "notarized": true,
   "platforms": [
     {
       "name": "macos-apple-silicon",
       "asset": "compass-darwin-arm64",
-      "checksum": "180ed3f55b425340b91762ebd763e0a6f2076cac0fbaa7a6a94555d4ee6c95e3",
+      "checksum": "304da3a15f49c2d2205be8117d87cf4ffc7ed05e3c810e4438db90aec3856d4d",
       "checksum_file": "checksums/compass-darwin-arm64.sha256",
       "archive": "compass-darwin-arm64.zip",
-      "archive_checksum": "39bda44a656580bad8927a9635ce1db05f9e6cfb88a7616d55e61ba8ccf7859a",
+      "archive_checksum": "69fe940a9fbdb8ec8058d28d19cebce8fd6189fea7bc13fd2cee853281d8ee18",
       "archive_checksum_file": "checksums/compass-darwin-arm64.zip.sha256",
       "tested_terminal": "iTerm2"
     }
