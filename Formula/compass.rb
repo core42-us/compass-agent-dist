@@ -1,10 +1,10 @@
 class Compass < Formula
   desc "Local-first coding assistant for repo-aware developer workflows"
   homepage "https://github.com/core42-us/compass-agent-dist"
-  url "https://github.com/core42-us/compass-agent-dist/releases/download/source-7f769fa/compass-darwin-arm64.zip"
-  version "20260417151246.7f769fa"
+  url "https://github.com/core42-us/compass-agent-dist/releases/download/source-36d2f82/compass-darwin-arm64.zip"
+  version "20260417184540.36d2f82"
   version_scheme 1
-  sha256 "781bbe88d4bafb59b30d6e73cb745099e1cce04dbb40db0576314aaaf12b749b"
+  sha256 "da8ebfdfe7eecd99c79b075920eedd69eeef2e93b278a991b3b1583351925d2c"
 
   depends_on arch: :arm64
   depends_on :macos
@@ -16,10 +16,12 @@ class Compass < Formula
     bin.install "compass-agent"
     bin.install "compass-server"
     bin.install "compass-bridge"
+    pkgshare.install "compass-chat.vsix"
   end
 
   test do
     assert_match version.to_s, shell_output("#{bin}/compass version")
     assert_match "compass bridge", shell_output("#{bin}/compass bridge")
+    assert_predicate pkgshare/"compass-chat.vsix", :exist?
   end
 end
