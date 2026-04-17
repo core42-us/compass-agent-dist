@@ -1,9 +1,9 @@
 class Compass < Formula
   desc "Local-first coding assistant for repo-aware developer workflows"
   homepage "https://github.com/core42-us/compass-agent-dist"
-  url "https://github.com/core42-us/compass-agent-dist/releases/download/source-920124c/compass-darwin-arm64.zip"
-  version "source-920124c"
-  sha256 "69fe940a9fbdb8ec8058d28d19cebce8fd6189fea7bc13fd2cee853281d8ee18"
+  url "https://github.com/core42-us/compass-agent-dist/releases/download/source-c0307f8/compass-darwin-arm64.zip"
+  version "source-c0307f8"
+  sha256 "4f85a61f62838f04225d824358a3023d3b535bdc1f6fd23f3418f30fee95519c"
 
   depends_on arch: :arm64
   depends_on :macos
@@ -11,9 +11,14 @@ class Compass < Formula
 
   def install
     bin.install "compass-darwin-arm64" => "compass"
+    bin.install "compass-tui"
+    bin.install "compass-agent"
+    bin.install "compass-server"
+    bin.install "compass-bridge"
   end
 
   test do
     assert_match version.to_s, shell_output("#{bin}/compass version")
+    assert_match "compass bridge", shell_output("#{bin}/compass bridge")
   end
 end
