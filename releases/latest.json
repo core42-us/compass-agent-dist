@@ -1,7 +1,7 @@
 {
   "version": "source-bcbadf3",
   "source_commit": "bcbadf3",
-  "homebrew_version": "20260422143316.bcbadf3",
+  "homebrew_version": "source-bcbadf3",
   "signed": true,
   "notarized": true,
   "platforms": [

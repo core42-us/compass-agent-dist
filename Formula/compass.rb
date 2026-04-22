@@ -2,7 +2,7 @@ class Compass < Formula
   desc "Local-first coding assistant for repo-aware developer workflows"
   homepage "https://github.com/core42-us/compass-agent-dist"
   url "https://github.com/core42-us/compass-agent-dist/releases/download/source-bcbadf3/compass-darwin-arm64.zip"
-  version "20260422143316.bcbadf3"
+  version "source-bcbadf3"
   version_scheme 1
   sha256 "50ac5f73182a237be939df20e992cb588f244d21f478eec194ba53b3bd00f724"
 
